@@ -1,0 +1,132 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", monospace;
+    font-size: 12.5px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(12, 11, 12, 0.95);
+    color: #cfd3cd;
+}
+
+/* Left Section: Kali Launcher & Workspaces */
+#custom-kali {
+    color: #b59790;
+    padding: 0 6px 0 10px;
+    font-size: 13.5px;
+    transition: color 0.2s ease;
+}
+
+#custom-kali:hover {
+    color: #FAFCFB;
+}
+
+#workspaces {
+    padding-left: 2px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #797b80;
+    background: transparent;
+    font-size: 11.5px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #b59790;
+}
+
+#workspaces button.active {
+    color: #FAFCFB;
+    font-size: 12.5px;
+    font-weight: bold;
+}
+
+/* Center Section: Clock & Media */
+#clock {
+    color: #cfd3cd;
+    font-weight: 600;
+    padding: 0 8px;
+}
+
+#custom-media {
+    color: #cfd3cd;
+    font-weight: 600;
+    padding: 0 8px;
+}
+
+#custom-media.playing {
+    color: #e2dddc;
+}
+
+#custom-media.paused {
+    color: #797b80;
+    font-weight: 500;
+}
+
+/* Tray (message apps only) + native wifi/bt modules */
+#tray {
+    padding: 0 6px;
+}
+
+#custom-wifi, #custom-bluetooth {
+    color: #797b80;
+    font-size: 12px;
+    padding: 0 2px 0 4px;
+    transition: color 0.2s ease;
+}
+
+#custom-wifi.connected, #custom-bluetooth.connected {
+    color: #e2dddc;
+}
+
+#custom-wifi:hover, #custom-bluetooth:hover {
+    color: #FAFCFB;
+}
+
+#tray menu,
+#tray menuitem {
+    background: #0c0b0c;
+    color: #e2dddc;
+}
+
+#tray menuitem:hover {
+    background: #b59790;
+    color: #0c0b0c;
+}
+
+/* Right Section: Status Tray */
+#custom-drawer,
+#pulseaudio,
+#backlight,
+#battery {
+    color: #cfd3cd;
+    padding: 0 6px;
+    font-size: 11.5px;
+    transition: color 0.2s ease;
+}
+
+#custom-drawer {
+    color: #797b80;
+    font-size: 13px;
+    padding-right: 2px;
+}
+
+#pulseaudio:hover,
+#backlight:hover,
+#battery:hover,
+#custom-drawer:hover {
+    color: #b59790;
+}
+
+#battery.warning:not(.charging) {
+    color: #e2c1b8;
+}
+
+#battery.critical:not(.charging) {
+    color: #c38b7b;
+}

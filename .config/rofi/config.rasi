@@ -1,0 +1,20 @@
+/**
+ * Raycast-style Crimson Minimalist Rofi Launcher
+ * Anti-Slop, High Retention Clean UI
+ **/
+
+configuration {
+    modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               " ";
+    display-run:                " ";
+    display-filebrowser:        " ";
+    display-window:             " ";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+    font: "JetBrainsMono Nerd Font Mono 11";
+    icon-theme:                 "Papirus-Dark";
+    click-to-exit:              true;
+}
+
+@theme "~/.config/rofi/lasthorizon.rasi"

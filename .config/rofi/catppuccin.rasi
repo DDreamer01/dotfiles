@@ -1,0 +1,154 @@
+/**
+ * Crimson Minimalist Rofi Theme (Raycast Spotlight Aesthetic)
+ * Author: Antigravity
+ **/
+
+* {
+    bg-col:                      #0c0e14ea;
+    bg-col-light:                #151515;
+    border-col:                  #ffffff;
+    border-subtle:               rgba(255, 255, 255, 0.35);
+    selected-col:                #222222;
+    accent-col:                  #ffffff;
+    fg-col:                      #eeeeee;
+    fg-muted:                    #999999;
+    grey:                        #777777;
+    transparent:                 #00000000;
+
+    background-color:            transparent;
+    text-color:                  @fg-col;
+    margin:                      0px;
+    font:                        "JetBrainsMono Nerd Font Mono 11";
+    padding:                     0px;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       640px;
+    x-offset:                    0px;
+    y-offset:                    -100px;
+
+    enabled:                     true;
+    border-radius:               14px;
+    border:                      1.5px solid;
+    border-color:                @border-subtle;
+    background-color:            @bg-col;
+    cursor:                      "default";
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     16px;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listview", "mode-switcher" ];
+    background-color:            transparent;
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     12px;
+    padding:                     12px 16px;
+    border-radius:               10px;
+    background-color:            @bg-col-light;
+    text-color:                  @fg-col;
+    orientation:                 horizontal;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  @accent-col;
+    font: "JetBrainsMono Nerd Font Mono 11";
+}
+
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  @fg-col;
+    cursor:                      text;
+    placeholder:                 "Search applications, commands, files...";
+    placeholder-color:           @fg-muted;
+    font: "JetBrainsMono Nerd Font Mono 11";
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     4px;
+    margin:                      12px 0px 0px 0px;
+    background-color:            transparent;
+}
+
+element {
+    enabled:                     true;
+    spacing:                     14px;
+    padding:                     10px 14px;
+    border-radius:               8px;
+    background-color:            transparent;
+    text-color:                  @fg-col;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @fg-col;
+}
+
+element selected.normal {
+    background-color:            @selected-col;
+    text-color:                  #ffffff;
+    border:                      1px solid;
+    border-color:                rgba(255, 255, 255, 0.4);
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        24px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    font: "JetBrainsMono Nerd Font Mono 11";
+}
+
+mode-switcher {
+    enabled:                     true;
+    spacing:                     8px;
+    margin:                      10px 0px 0px 0px;
+    background-color:            transparent;
+}
+
+button {
+    padding:                     6px 12px;
+    border-radius:               6px;
+    background-color:            @bg-col-light;
+    text-color:                  @fg-muted;
+    cursor:                      pointer;
+    font: "JetBrainsMono Nerd Font Mono 11";
+}
+
+button selected {
+    background-color:            rgba(255, 255, 255, 0.15);
+    text-color:                  #ffffff;
+    border:                      1px solid;
+    border-color:                rgba(255, 255, 255, 0.35);
+}

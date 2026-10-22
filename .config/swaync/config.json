@@ -1,0 +1,117 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "cssPriority": "application",
+  "control-center-margin-top": 32,
+  "control-center-margin-bottom": 12,
+  "control-center-margin-right": 10,
+  "control-center-margin-left": 0,
+  "notification-2fa-action": true,
+  "notification-inline-replies": true,
+  "notification-icon-size": 48,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 6,
+  "timeout-low": 3,
+  "timeout-critical": 0,
+  "fit-to-screen": false,
+  "control-center-width": 380,
+  "control-center-height": 640,
+  "notification-window-width": 360,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "widgets": [
+    "menubar",
+    "title",
+    "dnd",
+    "mpris",
+    "volume",
+    "backlight",
+    "notifications",
+    "buttons-grid"
+  ],
+  "widget-config": {
+    "menubar": {
+      "buttons#left": {
+        "position": "left",
+        "actions": [
+          {
+            "label": "\udb82\udcc6 Control Center",
+            "command": ""
+          }
+        ]
+      },
+      "buttons#right": {
+        "position": "right",
+        "actions": [
+          {
+            "label": "\udb81\udc93",
+            "command": "gnome-control-center || xfce4-settings-manager || rofi -show drun"
+          },
+          {
+            "label": "\udb81\udc25",
+            "command": "~/.config/hypr/scripts/powermenu.sh"
+          }
+        ]
+      }
+    },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "volume": {
+      "label": "\udb81\udd7e"
+    },
+    "backlight": {
+      "label": "\udb80\udcdf",
+      "device": "intel_backlight",
+      "min": 6000
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "\udb82\udd28 Wi-Fi",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c 'if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then nmcli radio wifi on; else nmcli radio wifi off; fi'"
+        },
+        {
+          "label": "\udb80\udcaf Bluetooth",
+          "command": "~/.config/waybar/btmenu.sh"
+        },
+        {
+          "label": "\udb81\udd7e Audio",
+          "command": "pavucontrol"
+        },
+        {
+          "label": "\udb80\udf0c Cheats",
+          "command": "~/.config/hypr/scripts/keybinds.sh"
+        },
+        {
+          "label": "\udb80\udf3e Lock",
+          "command": "hyprlock"
+        },
+        {
+          "label": "\udb81\udc25 Power",
+          "command": "~/.config/hypr/scripts/powermenu.sh"
+        }
+      ]
+    },
+    "mpris": {
+      "image-size": 64,
+      "image-radius": 8
+    }
+  }
+}

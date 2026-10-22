@@ -1,0 +1,68 @@
+* {
+    bg:           #0c0b0c;
+    fg:           #e2dddc;
+    fg-muted:     #797b80;
+    border-col:   #e2dddc;
+    selected-bg:  rgba(255, 255, 255, 0.08);
+    selected-fg:  #ba948b;
+    font:         "JetBrainsMono Nerd Font Mono 11";
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    location:         center;
+    width:            720px;
+    border:           1.5px solid;
+    border-color:     @border-col;
+    border-radius:    6px;
+    background-color: @bg;
+    padding:          14px 16px;
+}
+
+mainbox {
+    padding:          0px;
+    spacing:          10px;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:          true;
+    padding:          0px 0px 6px 0px;
+    children:         [ "prompt" ];
+}
+
+prompt {
+    text-color:       @fg-muted;
+    font:             "JetBrainsMono Nerd Font Mono 11";
+}
+
+listview {
+    padding:          0px;
+    lines:            14;
+    spacing:          3px;
+    cycle:            true;
+    scrollbar:        false;
+}
+
+element {
+    padding:          7px 12px;
+    border-radius:    4px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "JetBrainsMono Nerd Font Mono 11";
+}

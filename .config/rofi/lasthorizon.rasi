@@ -1,0 +1,67 @@
+* {
+    bg:           #0c0b0c;
+    header-bg:    #ba948b;
+    header-fg:    #0c0b0c;
+    fg:           #e2dddc;
+    fg-muted:     #797b80;
+    border-col:   #e2dddc;
+    selected-bg:  #201b1e;
+    selected-fg:  #ba948b;
+    font:         "JetBrainsMono Nerd Font Mono 13";
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    location:         center;
+    width:            700px;
+    border:           2px solid;
+    border-color:     @border-col;
+    border-radius:    12px;
+    background-color: @bg;
+}
+
+mainbox {
+    padding:          0px;
+    spacing:          0px;
+    children:         [ "inputbar", "listview" ];
+}
+
+inputbar {
+    background-color: @header-bg;
+    padding:          10px 14px;
+    children:         [ "prompt", "entry" ];
+}
+
+prompt {
+    text-color:       @header-fg;
+    font:             "JetBrainsMono Nerd Font Mono Bold 13";
+}
+
+entry {
+    text-color:       @header-fg;
+    placeholder:      "Go...";
+    placeholder-color:#33241f;
+}
+
+listview {
+    padding:          10px;
+    lines:            11;
+    spacing:          4px;
+}
+
+element {
+    padding:          10px 12px;
+    border-radius:    8px;
+}
+
+element selected.normal {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+
+element-icon {
+    size: 28px;
+    margin: 0 10px 0 0;
+}

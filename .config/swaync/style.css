@@ -1,0 +1,258 @@
+/* ─── SwayNC Crimson Minimalist CSS ───────────────────────────── */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", monospace;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.control-center {
+    background: rgba(12, 11, 12, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.notification-row {
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    margin: 6px 0px;
+}
+
+.notification {
+    background: rgba(25, 25, 25, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 4px 0px;
+}
+
+.notification.critical {
+    border: 1.5px solid #ffffff;
+    background: rgba(35, 35, 35, 0.9);
+}
+
+.notification-content {
+    background: transparent;
+    padding: 2px;
+}
+
+.summary {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.time {
+    font-size: 11px;
+    color: #797b80;
+    margin-right: 6px;
+}
+
+.body {
+    font-size: 12px;
+    color: #cfd3cd;
+    margin-top: 4px;
+}
+
+.widget-title {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.widget-title > button {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.widget-title > button:hover {
+    background: #ffffff;
+    color: #0c0b0c;
+}
+
+.widget-dnd {
+    background: rgba(25, 25, 25, 0.85);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 8px 0px;
+    color: #cfd3cd;
+}
+
+.widget-dnd > switch {
+    border-radius: 12px;
+    background: rgba(20, 20, 20, 0.8);
+}
+
+.widget-dnd > switch:checked {
+    background: #b59790;
+}
+
+.widget-mpris {
+    background: rgba(25, 25, 25, 0.85);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0px;
+}
+
+.widget-mpris-player {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.widget-mpris-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.widget-mpris-subtitle {
+    color: #797b80;
+    font-size: 11px;
+}
+
+/* Menubar (Header with Title, Settings, and Power) */
+.widget-menubar {
+    padding: 0px 4px 6px 4px;
+    margin-bottom: 4px;
+}
+
+.widget-menubar > box > box > button {
+    background: transparent;
+    border: none;
+    color: #cfd3cd;
+    font-size: 15px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.widget-menubar > box > box > button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #b59790;
+}
+
+/* Quick Settings Buttons Grid */
+.widget-buttons-grid {
+    padding: 4px 0px;
+    margin-bottom: 8px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: rgba(25, 25, 25, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 9px 12px;
+    color: #e2dddc;
+    transition: all 0.2s ease-in-out;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #b59790;
+    color: #ffffff;
+}
+
+/* Highlighted state for enabled toggles (WiFi, Bluetooth) */
+.widget-buttons-grid flowboxchild > button:checked,
+.widget-buttons-grid flowboxchild > button.toggle:checked,
+.widget-buttons-grid flowboxchild > button.active,
+.widget-buttons-grid button:checked,
+.widget-buttons-grid button.active,
+.widget-buttons flowboxchild > button:checked,
+.widget-buttons flowboxchild > button.active {
+    background: #b59790;
+    color: #0c0b0c;
+    border: 1px solid #c38b7b;
+    font-weight: bold;
+}
+
+.widget-buttons-grid flowboxchild > button:checked:hover,
+.widget-buttons-grid flowboxchild > button.toggle:checked:hover,
+.widget-buttons-grid flowboxchild > button.active:hover,
+.widget-buttons-grid button:checked:hover,
+.widget-buttons-grid button.active:hover,
+.widget-buttons flowboxchild > button:checked:hover,
+.widget-buttons flowboxchild > button.active:hover {
+    background: #c38b7b;
+    color: #0c0b0c;
+}
+
+/* Volume and Backlight Sliders */
+.widget-volume, .widget-backlight {
+    background: rgba(25, 25, 25, 0.85);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 4px 0px;
+    color: #ffffff;
+}
+
+.widget-volume > box > label, .widget-backlight > box > label {
+    color: #ffffff;
+    margin-right: 8px;
+}
+
+scale trough highlight {
+    background: #b59790;
+    border-radius: 8px;
+}
+
+scale trough {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    min-height: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+scale slider {
+    background: #ffffff;
+    border: 2px solid rgba(25, 25, 25, 0.8);
+    border-radius: 50%;
+    min-width: 14px;
+    min-height: 14px;
+}
+
+scale slider:hover {
+    background: #e0e0e0;
+}
+
+/* Ultra-Slim Minimalist Scrollbar */
+scrollbar {
+    background: transparent;
+    border: none;
+    min-width: 2px;
+    min-height: 2px;
+    padding: 0px;
+    margin: 0px;
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+}
+
+scrollbar slider {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    min-width: 2px;
+    min-height: 20px;
+    border: none;
+    margin: 0px;
+}
+
+scrollbar slider:hover {
+    background: #b59790;
+}
+
+scrollbar trough {
+    background: transparent;
+    border: none;
+}
